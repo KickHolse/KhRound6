@@ -1,0 +1,81 @@
+# Skript feito por Kick Holse
+# Discord: https://www.kskripts.tk/discord
+
+lobby:
+  broadcast: '{khcore_prefixed} &6entrou neste lobby!'
+  hotbar:
+    profile:
+      slot: 1
+      execute: 'CORE>profile'
+      icon: 'item>HEAD:dono={player} : nome>&aMeu Perfil &7(Clique direito) : desc>&7Veja todas as suas informações!'
+    shop:
+      slot: 3
+      execute: 'ROUND6>shop'
+      icon: 'item>EMERALD : nome>&aLoja &7(Clique direito) : desc>&7Compre diversos cosméticos!'
+    players:
+      slot: 7
+      execute: 'SETTINGS>players'
+      icon: 'item>351:10 : nome>&fJogadores &aON : desc>&7Desative a visibilidade dos jogadores!'
+      icon-i: 'item>351:8 : nome>&fJogadores &cOFF : desc>&7Ative a visibilidade dos jogadores!'
+  chat:
+    color:
+      default: '&7'
+      custom: '&f'
+    format: '{prefix}{player}{color}: {message}'
+  motd:
+    enabled: true
+    header: '&a&lKS &f- &7www.kskripts.tk'
+    footer: '&e&mROUND 6&e lançado com &lDOUBLE COINS&e!'
+  tablist:
+    enabled: true
+    header: '\n&a&lREDE KS\n    &fjogar.kskripts.tk\n '
+    footer: ' \n&bForúm: &fkskripts.tk/forum\n&b               Discord: &fkskripts.tk/discord               \n'
+game:
+  rewards:
+    coins-per-play: 20
+    coins-per-kill: 10
+    coins-per-win: 50
+  messages:
+    cooldown: '&cVocê deve esperar &7{time}&c para usar isto.'
+    earnings-coins: '&6+{coins} moedas &8- &e+{exp} EXP'
+  command:
+    build:
+      enabled: '&aO seu modo construtor foi ativado!'
+      disabled: '&cO seu modo construtor foi desativado!'
+  hotbar:
+    quit:
+      slot: 8
+      execute: 'POTATO>leave'
+      icon: 'item>BED : nome>&cSair &7(Clique direito) : desc>&7Clique com o botão direito\n&7para voltar ao lobby!'
+scoreboard:
+  update-time: 1
+  titles:
+  - '&a&lROUND 6'
+  lines:
+    lobby:
+    - ''
+    - ''
+    - ' &ewww.kskripts.tk'
+    waiting:
+    - ''
+    - ' Jogadores: &a{playing}/{maximum}'
+    - ' Jogo: &a{game}'
+    - ''
+    - ' {time}'
+    - ''
+    - ' &ewww.kskripts.tk'
+    ingame:
+    - ' &8{game} '
+    - ''
+    - ' Tempo: &a{time}'
+    - ' Jogadores: &a{alive}'
+    - ''
+    - ' Melhores Tempos:'
+    - ' &a1. {top_1}'
+    - ' &e2. {top_2}'
+    - ' &c3. {top_3}'
+    - ''
+    - ' &ewww.kskripts.tk'
+  replace:
+    waiting: 'Esperando...'
+    starting: 'Iniciando em &a{seconds}s'
